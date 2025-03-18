@@ -88,12 +88,30 @@
                     <li>You can copy the output using the "Copy" button.</li>
                     <li>Use "Clear" to reset everything.</li>
                 </ol>
-                <h3>Where to put the output?</h3>
+                <h3>Adding the custom paint in-game?</h3>
+                <h4>PC</h4>
                 <ol>
                     <li>Copy the output</li>
-                    <li></li>
+                    <li>Open the addon folder (AppData\Local\packages\Minecraft Folder\LocalState\games\com.mojang\behavior_packs\Painter Behavior)</li>
+                    <li>Go to scripts folder and open customPaints.js</li>
+                    <li>
+                        Create a new export function with a unique name then paste the code inside of it then return customImage
+                        <img src="images/code_tutorial.png" alt="Tutorial" class="img-fluid">
+                    </li>
+                    <li>If you are in game run the reload command '/reload'</li>
                 </ol>
-                
+                <h4>Mobile</h4>
+                <ol>
+                    <li>Copy the output</li>
+                    <li>Extract the behavior pack from the .mcaddon file</li>
+                    <li>Go inside the behavior pack and go to scripts folder and open customPaints.js</li>
+                    <li>
+                        Create a new export function with a unique name then paste the code inside of it then return customImage
+                        <img src="images/code_tutorial.png" alt="Tutorial" class="img-fluid">
+                    </li>
+                    <li>(Optional) Change manifest values if necessary.</li>
+                    <li>After editing the behavior pack, compress the behavior pack and name the extension .mcpack (painter behavior.mcpack)</li>
+                    <li>Put the addon in game</li>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
