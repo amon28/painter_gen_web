@@ -14,7 +14,7 @@
 </head>
 <body>
     <!-- Tutorial Button -->
-    <button id="openTutorialBtn" class="btn btn-primary" style="position: absolute; top: 10px; left: 10px;">
+    <button id="openTutorialBtn" class="btn btn-primary" style="position: sticky; top: 10px; left: 10px;">
         📖 Tutorial
     </button>
 
@@ -42,6 +42,25 @@
         <div class="col-md-6 text-center">
           <h5>Resized</h5>
           <div id="resizedPreview" class="mb-3"></div>
+        </div>
+      </div>
+
+      <!-- Image Size and Resize Algorithm Options -->
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="sizeSelector" class="form-label">Select Image Size</label>
+          <select class="form-select" id="sizeSelector">
+            <option value="16">16x16</option>
+            <option value="32">32x32</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label for="resizeAlgorithm" class="form-label">Resize Algorithm</label>
+          <select class="form-select" id="resizeAlgorithm">
+            <option value="nearest">Nearest Neighbor</option>
+            <option value="bilinear">Bilinear</option>
+            <option value="bicubic">Bicubic</option>
+          </select>
         </div>
       </div>
 
@@ -78,42 +97,42 @@
                 <h5 class="modal-title" id="tutorialModalLabel">Painter Gen Tutorial</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
-                <span style="color: red;"><strong>Reminder: </strong>This website doesn't save the images you uploaded.</span>
-                <h3>How to use?</h3>
-                <ol>
-                    <li>Click "Upload Image" to select an image.</li>
-                    <li>Once uploaded, you will see the preview.</li>
-                    <li>Click "Generate Paint" to process the image.</li>
-                    <li>The resized image and a JavaScript array will be displayed.</li>
-                    <li>You can copy the output using the "Copy" button.</li>
-                    <li>Use "Clear" to reset everything.</li>
-                </ol>
-                <h3>Adding the custom paint in-game?</h3>
-                <h4>PC</h4>
-                <ol>
-                    <li>Copy the output</li>
-                    <li>Open the addon folder (AppData\Local\packages\Minecraft Folder\LocalState\games\com.mojang\behavior_packs\Painter Behavior)</li>
-                    <li>Go to scripts folder and open customPaints.js</li>
-                    <li>
-                        Create a new export function with a unique name then paste the code inside of it then return customImage
-                        <img src="images/code_tutorial.png" alt="Tutorial" class="img-fluid">
-                    </li>
-                    <li>If you are in game run the reload command '/reload'</li>
-                </ol>
-                <h4>Mobile</h4>
-                <ol>
-                    <li>Copy the output</li>
-                    <li>Extract the behavior pack from the .mcaddon file</li>
-                    <li>Go inside the behavior pack and go to scripts folder and open customPaints.js</li>
-                    <li>
-                        Create a new export function with a unique name then paste the code inside of it then return customImage
-                        <img src="images/code_tutorial.png" alt="Tutorial" class="img-fluid">
-                    </li>
-                    <li>(Optional) Change manifest values if necessary.</li>
-                    <li>After editing the behavior pack, compress the behavior pack and name the extension .mcpack (painter behavior.mcpack)</li>
-                    <li>Put the addon in game</li>
-            </div>
+              <div class="modal-body" style="max-height: 80vh; overflow-y: auto; padding: 5px;">
+                  <span style="color: red;"><strong>Reminder: </strong>This website doesn't save the images you uploaded.</span>
+                  <h3>How to use?</h3>
+                  <ol>
+                      <li>Click "Upload Image" to select an image.</li>
+                      <li>You can adjust the image size and the algorithm to be use. The bigger the image size the higher the performance impact while ingame.</li>
+                      <li>Click "Generate Paint" to process the image.</li>
+                      <li>The resized image and a JavaScript array will be displayed.</li>
+                      <li>You can copy the output using the "Copy to Clipboard" button.</li>
+                      <li>Use "Clear" to reset everything.</li>
+                  </ol>
+                  <h3>Adding the custom paint in-game?</h3>
+                  <h4>PC</h4>
+                  <ol>
+                      <li>Copy the output</li>
+                      <li>Open the addon folder (AppData\Local\packages\Minecraft Folder\LocalState\games\com.mojang\behavior_packs\Painter Behavior)</li>
+                      <li>Go to scripts folder and open customPaints.js</li>
+                      <li>
+                          Your code will look like this after you pasted it. Change the the function "yourUniquePaintName" to your own name.
+                          <img src="images/code_tutorial.png" alt="Tutorial" class="img-fluid">
+                      </li>
+                      <li>If you are in game run the reload command '/reload'</li>
+                  </ol>
+                  <h4>Mobile</h4>
+                  <ol>
+                      <li>Copy the output</li>
+                      <li>Extract the behavior pack from the .mcaddon file</li>
+                      <li>Go inside the behavior pack and go to scripts folder and open customPaints.js</li>
+                      <li>
+                          Your code will look like this after you pasted it. Change the the function "yourUniquePaintName" to your own name.
+                          <img src="images/code_tutorial.png" alt="Tutorial" class="img-fluid">
+                      </li>
+                      <li>(Optional) Change manifest values if necessary.</li>
+                      <li>After editing the behavior pack, compress the behavior pack and name the extension .mcpack (painter behavior.mcpack)</li>
+                      <li>Put the addon in game</li>
+              </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>
