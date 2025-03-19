@@ -60,6 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
       uploadedImageDataUrl = imageUrl;
       originalPreview.innerHTML = `<img src="${uploadedImageDataUrl}" class="img-thumbnail" style="max-width: 200px;">`;
       generatePaintBtn.disabled = false;
+      alert("Image loaded successfully!");
     };
     img.onerror = function () {
       alert("Failed to load the image. Please check the URL.");
