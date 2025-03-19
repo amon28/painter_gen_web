@@ -31,10 +31,26 @@
     <div class="card shadow p-4">
       <h2 class="text-center">Generate Paint</h2>
 
-      <!-- File Upload Input -->
+      <!-- Toggle Upload/URL -->
       <div class="mb-3">
+        <label class="form-label">Choose Image Source</label>
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="toggleImageSource">
+          <label class="form-check-label" for="toggleImageSource">Use Online Image</label>
+        </div>
+      </div>
+
+      <!-- File Upload Input -->
+      <div id="uploadSection" class="mb-3">
         <label for="imageUpload" class="form-label">Choose an image</label>
         <input class="form-control" type="file" id="imageUpload" accept="image/*">
+      </div>
+
+      <!-- URL Input (Hidden Initially) -->
+      <div id="urlSection" class="mb-3" style="display: none;">
+        <label for="imageUrl" class="form-label">Enter Image URL</label>
+        <input class="form-control" type="text" id="imageUrl" placeholder="https://example.com/image.png">
+        <button class="btn btn-primary mt-2" id="loadImageUrl">Load Image</button>
       </div>
 
       <!-- Progress Bar -->
