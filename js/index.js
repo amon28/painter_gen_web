@@ -97,7 +97,8 @@ document.addEventListener("DOMContentLoaded", function () {
                   row.push({
                       r: (data[index] / 255).toFixed(2),
                       g: (data[index + 1] / 255).toFixed(2),
-                      b: (data[index + 2] / 255).toFixed(2)
+                      b: (data[index + 2] / 255).toFixed(2),
+                      a: (data[index + 3] / 255).toFixed(2),
                   });
               }
               pixelArray.push(row);
@@ -112,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
           outputStr += "  const resolution = " + targetSize + ";\n";
           outputStr += "  const customImage = [\n";
           pixelArray.forEach(row => {
-              let rowStr = row.map(pixel => `{ r: ${pixel.r}, g: ${pixel.g}, b: ${pixel.b} }`).join(", ");
+              let rowStr = row.map(pixel => `{ r: ${pixel.r}, g: ${pixel.g}, b: ${pixel.b}, a: ${pixel.a} }`).join(", ");
               outputStr += "      [" + rowStr + "],\n";
           });
           outputStr += "  ];\n";
