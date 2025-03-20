@@ -1,4 +1,5 @@
 import { downscaleImage } from './utils/processImage.js';
+import './utils/design.js';
 
 document.addEventListener("DOMContentLoaded", function () {
   const imageUpload = document.getElementById("imageUpload");
