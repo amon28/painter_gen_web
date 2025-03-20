@@ -24,7 +24,7 @@
 }
 
 /* When the screen width is 600px or smaller, change to horizontal layout */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .container-fluid {
     flex-direction: row;
     max-width: 100%;

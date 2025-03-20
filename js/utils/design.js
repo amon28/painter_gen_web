@@ -1,6 +1,6 @@
 window.addEventListener("scroll", function () {
     const screenWidth = window.innerWidth;
-    if(screenWidth <= 600){
+    if(screenWidth <= 800){
         let buttonElements = document.querySelectorAll(".fixed-btn")
         buttonElements.forEach((element)=>{
             let scrollAmount = window.scrollY;
