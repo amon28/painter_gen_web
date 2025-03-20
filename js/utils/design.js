@@ -7,7 +7,7 @@ window.addEventListener("scroll", function () {
             let maxScroll = 200; // The scroll point where it becomes fully transparent
             let opacity = 1 - (scrollAmount / maxScroll);
 
-            if (opacity < 0) opacity = 0; // Prevent opacity from going negative
+            if (opacity < 0.5) opacity = 0.5; // Prevent opacity from going negative
             element.style.opacity = opacity;
         }) 
     }else{
